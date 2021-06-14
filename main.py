@@ -26,7 +26,10 @@ def cl():
 		exit()
 		quit(exit(quit(exit(quit(exit(quit(exit(quit(exit())))))))))
 tki.protocol('WM_DELETE_WINDOW', cl)
-tki.iconbitmap('I:/稀有的金属的空间/supercalculator/supercalculator.ico')
+try:
+	tki.iconbitmap('supercalculator.ico')
+except FileNotFoundError:
+	pass
 menu = tk.Menu(tki)
 Setting = tk.Menu(menu, tearoff=False)
 Setting.add_checkbutton(label='保持窗口最前', command=change_top)
